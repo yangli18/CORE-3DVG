@@ -14,6 +14,17 @@ import numpy as np
 from plyfile import PlyData
 
 
+def read_ply_vertex_data(path):
+    """Read only the vertex element and skip unused mesh faces."""
+    with open(path, 'rb') as stream:
+        ply = PlyData._parse_header(stream)
+        if not ply.elements or ply.elements[0].name != 'vertex':
+            raise ValueError('PLY vertex element must be first: ' + str(path))
+        vertex = ply.elements[0]
+        vertex._read(stream, ply.text, ply.byte_order, mmap=True)
+        return vertex.data
+
+
 class ScanNetMappings:
     """Holds ScanNet dataset mappings."""
 
@@ -69,11 +80,18 @@ class ScanNetMappings:
 class Scan:
     """Scan class for ScanNet."""
 
-    def __init__(self, scan_id, top_scan_dir, load_objects=True):
+    def __init__(
+        self,
+        scan_id,
+        top_scan_dir,
+        load_objects=True,
+        align_to_axes=True,
+    ):
         """Initialize for given scan_id, mappings and ScanNet path."""
         self.mappings = ScanNetMappings()
         self.scan_id = scan_id
         self.top_scan_dir = top_scan_dir
+        self.should_align_to_axes = align_to_axes
         self.choices = None
         self.pc, self.semantic_label_idx, self.color = self.load_point_cloud()
         self.orig_pc = np.copy(self.pc)  # this won't be augmented
@@ -85,28 +103,31 @@ class Scan:
         """Load point-cloud information."""
         # Load labels
         label = None
-        if osp.exists(self.scan_id + '_vh_clean_2.labels.ply'):
-            data = PlyData.read(osp.join(
-                self.top_scan_dir,
-                self.scan_id, self.scan_id + '_vh_clean_2.labels.ply'
-            ))
-            label = np.asarray(data.elements[0].data['label'])
+        labels_path = osp.join(
+            self.top_scan_dir,
+            self.scan_id,
+            self.scan_id + '_vh_clean_2.labels.ply',
+        )
+        if osp.exists(labels_path):
+            data = read_ply_vertex_data(labels_path)
+            label = np.asarray(data['label'])
 
         # Load points and color
-        data = PlyData.read(osp.join(
+        data = read_ply_vertex_data(osp.join(
             self.top_scan_dir,
             self.scan_id, self.scan_id + '_vh_clean_2.ply'
         ))
         pc = np.stack([
-            np.asarray(data.elements[0].data['x']),
-            np.asarray(data.elements[0].data['y']),
-            np.asarray(data.elements[0].data['z'])
+            np.asarray(data['x']),
+            np.asarray(data['y']),
+            np.asarray(data['z'])
         ], axis=1)
-        pc = self.align_to_axes(pc)  # global alignment of the scan
+        if self.should_align_to_axes:
+            pc = self.align_to_axes(pc)  # global alignment of the scan
         color = (np.stack([
-            np.asarray(data.elements[0].data['red']),
-            np.asarray(data.elements[0].data['green']),
-            np.asarray(data.elements[0].data['blue'])
+            np.asarray(data['red']),
+            np.asarray(data['green']),
+            np.asarray(data['blue'])
         ], axis=1) / 256.0).astype(np.float32)
 
         # Keep a specific number of points

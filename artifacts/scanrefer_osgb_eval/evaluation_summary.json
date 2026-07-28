@@ -1,0 +1,54 @@
+{
+  "date": "2026-07-28",
+  "dataset": "ScanRefer",
+  "validation_scenes": 141,
+  "validation_samples": 9508,
+  "checkpoint": "logs/core3dvg_scanrefer.pth",
+  "ground_truth_source": "original DATA_ROOT and val_v3scans.pkl",
+  "baseline": {
+    "Acc@0.25": 0.5677324358435002,
+    "Acc@0.50": 0.4383676903660076
+  },
+  "payload": {
+    "inference_scans_dir": "artifacts/scanrefer_osgb_eval/payload_restored",
+    "Acc@0.25": 0.5677324358435002,
+    "Acc@0.50": 0.4383676903660076,
+    "absolute_delta_Acc@0.25": 0.0,
+    "absolute_delta_Acc@0.50": 0.0,
+    "byte_identical_restored_ply_scenes": 141,
+    "restored_vertex_ratio": 1.0
+  },
+  "geometry": {
+    "inference_scans_dir": "artifacts/scanrefer_osgb_eval/geometry_restored",
+    "Acc@0.25": 0.5648927219183845,
+    "Acc@0.50": 0.4368952461085402,
+    "absolute_delta_Acc@0.25": -0.0028397139251157277,
+    "absolute_delta_Acc@0.50": -0.001472444257467398,
+    "byte_identical_restored_ply_scenes": 0,
+    "source_vertices": 22224760,
+    "restored_vertices": 29027178,
+    "restored_vertex_ratio": 1.3060738563656031
+  },
+  "without_axis_alignment": {
+    "inference_scans_dir": "artifacts/scanrefer_osgb_eval/payload_restored",
+    "Acc@0.25": 0.0012620950778291964,
+    "Acc@0.50": 0.0,
+    "correct_at_0.25": 12,
+    "correct_at_0.50": 0,
+    "absolute_delta_Acc@0.25": -0.566470340765671,
+    "absolute_delta_Acc@0.50": -0.4383676903660076
+  },
+  "axis_alignment_source_check": {
+    "repository_json_scenes": 1513,
+    "all_available_txt_exact_matches": 1513,
+    "scanrefer_validation_scenes": 141,
+    "json_txt_exact_matches": 141,
+    "maximum_absolute_matrix_difference": 0.0
+  },
+  "logs": {
+    "payload": "artifacts/scanrefer_osgb_eval/eval_payload/log.txt",
+    "geometry": "artifacts/scanrefer_osgb_eval/eval_geometry/log.txt",
+    "without_axis_alignment": "artifacts/scanrefer_osgb_eval/eval_no_alignment/log.txt",
+    "conversion": "artifacts/scanrefer_osgb_eval/conversion_summary.json"
+  }
+}

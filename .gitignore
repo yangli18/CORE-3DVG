@@ -157,3 +157,10 @@ scanrefer_pred.json
 pred.json
 huggingface
 DATA_ROOT
+.tools/
+artifacts/osgb_roundtrip/*.osgb
+artifacts/osgb_roundtrip/restored_scans/
+artifacts/scanrefer_osgb_eval/payload_osgb/
+artifacts/scanrefer_osgb_eval/payload_restored/
+artifacts/scanrefer_osgb_eval/geometry_osgb/
+artifacts/scanrefer_osgb_eval/geometry_restored/

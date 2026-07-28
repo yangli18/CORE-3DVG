@@ -1,0 +1,3117 @@
+{
+  "scene_count": 141,
+  "success_count": 141,
+  "failure_count": 0,
+  "modes": [
+    "payload",
+    "geometry"
+  ],
+  "elapsed_seconds": 118.82721304893494,
+  "data_root": "DATA_ROOT",
+  "output_root": "artifacts/scanrefer_osgb_eval",
+  "scenes": {
+    "scene0011_00": {
+      "scene_id": "scene0011_00",
+      "elapsed_seconds": 0.16963863372802734,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "reused",
+          "osgb_bytes": 25751003,
+          "source_vertices": 237360,
+          "restored_vertices": 237360,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "reused",
+          "osgb_bytes": 18081071,
+          "source_vertices": 237360,
+          "restored_vertices": 316439,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0015_00": {
+      "scene_id": "scene0015_00",
+      "elapsed_seconds": 4.527065992355347,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 24007477,
+          "source_vertices": 217086,
+          "restored_vertices": 217086,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 17013335,
+          "source_vertices": 217086,
+          "restored_vertices": 301199,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0019_00": {
+      "scene_id": "scene0019_00",
+      "elapsed_seconds": 3.047670602798462,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 15540204,
+          "source_vertices": 136769,
+          "restored_vertices": 136769,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 11176519,
+          "source_vertices": 136769,
+          "restored_vertices": 201835,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0025_00": {
+      "scene_id": "scene0025_00",
+      "elapsed_seconds": 3.597435712814331,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 17760983,
+          "source_vertices": 173392,
+          "restored_vertices": 173392,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 12127523,
+          "source_vertices": 173392,
+          "restored_vertices": 203969,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0030_00": {
+      "scene_id": "scene0030_00",
+      "elapsed_seconds": 6.033375978469849,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 30476525,
+          "source_vertices": 293811,
+          "restored_vertices": 293811,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 20840631,
+          "source_vertices": 293811,
+          "restored_vertices": 351777,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0046_00": {
+      "scene_id": "scene0046_00",
+      "elapsed_seconds": 3.920469045639038,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 19036551,
+          "source_vertices": 186857,
+          "restored_vertices": 186857,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 12905943,
+          "source_vertices": 186857,
+          "restored_vertices": 214620,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0050_00": {
+      "scene_id": "scene0050_00",
+      "elapsed_seconds": 4.775857210159302,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 24130241,
+          "source_vertices": 211406,
+          "restored_vertices": 211406,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 17162423,
+          "source_vertices": 211406,
+          "restored_vertices": 306350,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0063_00": {
+      "scene_id": "scene0063_00",
+      "elapsed_seconds": 1.6092007160186768,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 7917563,
+          "source_vertices": 76966,
+          "restored_vertices": 76966,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 5470675,
+          "source_vertices": 76966,
+          "restored_vertices": 93718,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0064_00": {
+      "scene_id": "scene0064_00",
+      "elapsed_seconds": 4.947253942489624,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 26926389,
+          "source_vertices": 230672,
+          "restored_vertices": 230672,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 19434427,
+          "source_vertices": 230672,
+          "restored_vertices": 354748,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0077_00": {
+      "scene_id": "scene0077_00",
+      "elapsed_seconds": 1.9815778732299805,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 10045270,
+          "source_vertices": 92807,
+          "restored_vertices": 92807,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 7127539,
+          "source_vertices": 92807,
+          "restored_vertices": 125251,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0081_00": {
+      "scene_id": "scene0081_00",
+      "elapsed_seconds": 1.0681073665618896,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 5217723,
+          "source_vertices": 51381,
+          "restored_vertices": 51381,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 3537431,
+          "source_vertices": 51381,
+          "restored_vertices": 59063,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0084_00": {
+      "scene_id": "scene0084_00",
+      "elapsed_seconds": 2.3484623432159424,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 11683952,
+          "source_vertices": 116845,
+          "restored_vertices": 116845,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 7872887,
+          "source_vertices": 116845,
+          "restored_vertices": 128588,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0086_00": {
+      "scene_id": "scene0086_00",
+      "elapsed_seconds": 2.5664772987365723,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 12592112,
+          "source_vertices": 124572,
+          "restored_vertices": 124572,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 8503951,
+          "source_vertices": 124572,
+          "restored_vertices": 140158,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0088_00": {
+      "scene_id": "scene0088_00",
+      "elapsed_seconds": 3.2964930534362793,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 17378183,
+          "source_vertices": 166872,
+          "restored_vertices": 166872,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 12003591,
+          "source_vertices": 166872,
+          "restored_vertices": 205218,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0095_00": {
+      "scene_id": "scene0095_00",
+      "elapsed_seconds": 4.62303900718689,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 22921995,
+          "source_vertices": 214895,
+          "restored_vertices": 214895,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 16058295,
+          "source_vertices": 214895,
+          "restored_vertices": 277095,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0100_00": {
+      "scene_id": "scene0100_00",
+      "elapsed_seconds": 1.128962755203247,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 5190716,
+          "source_vertices": 52304,
+          "restored_vertices": 52304,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 3471343,
+          "source_vertices": 52304,
+          "restored_vertices": 56596,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0131_00": {
+      "scene_id": "scene0131_00",
+      "elapsed_seconds": 3.657919406890869,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 18442016,
+          "source_vertices": 177091,
+          "restored_vertices": 177091,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 12750615,
+          "source_vertices": 177091,
+          "restored_vertices": 217695,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0139_00": {
+      "scene_id": "scene0139_00",
+      "elapsed_seconds": 1.407459020614624,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 7195305,
+          "source_vertices": 72007,
+          "restored_vertices": 72007,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 4872983,
+          "source_vertices": 72007,
+          "restored_vertices": 81302,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0144_00": {
+      "scene_id": "scene0144_00",
+      "elapsed_seconds": 2.700206756591797,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 13575352,
+          "source_vertices": 126879,
+          "restored_vertices": 126879,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 9464091,
+          "source_vertices": 126879,
+          "restored_vertices": 164202,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0146_00": {
+      "scene_id": "scene0146_00",
+      "elapsed_seconds": 1.3687832355499268,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 5916195,
+          "source_vertices": 60438,
+          "restored_vertices": 60438,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 3948911,
+          "source_vertices": 60438,
+          "restored_vertices": 63404,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0149_00": {
+      "scene_id": "scene0149_00",
+      "elapsed_seconds": 3.4865353107452393,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 18255226,
+          "source_vertices": 162396,
+          "restored_vertices": 162396,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 12950527,
+          "source_vertices": 162396,
+          "restored_vertices": 230224,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0153_00": {
+      "scene_id": "scene0153_00",
+      "elapsed_seconds": 0.974172830581665,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 4709145,
+          "source_vertices": 47709,
+          "restored_vertices": 47709,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 3154775,
+          "source_vertices": 47709,
+          "restored_vertices": 51422,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0164_00": {
+      "scene_id": "scene0164_00",
+      "elapsed_seconds": 2.066040277481079,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 9876713,
+          "source_vertices": 94315,
+          "restored_vertices": 94315,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 6789979,
+          "source_vertices": 94315,
+          "restored_vertices": 116053,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0169_00": {
+      "scene_id": "scene0169_00",
+      "elapsed_seconds": 5.193714380264282,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 27153805,
+          "source_vertices": 239354,
+          "restored_vertices": 239354,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 19393319,
+          "source_vertices": 239354,
+          "restored_vertices": 347072,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0187_00": {
+      "scene_id": "scene0187_00",
+      "elapsed_seconds": 3.5668365955352783,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 18410543,
+          "source_vertices": 173752,
+          "restored_vertices": 173752,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 12795959,
+          "source_vertices": 173752,
+          "restored_vertices": 219485,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0193_00": {
+      "scene_id": "scene0193_00",
+      "elapsed_seconds": 2.2489075660705566,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 10658952,
+          "source_vertices": 101783,
+          "restored_vertices": 101783,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 7339375,
+          "source_vertices": 101783,
+          "restored_vertices": 124792,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0196_00": {
+      "scene_id": "scene0196_00",
+      "elapsed_seconds": 3.121102809906006,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 16093817,
+          "source_vertices": 146032,
+          "restored_vertices": 146032,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 11407067,
+          "source_vertices": 146032,
+          "restored_vertices": 203264,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0203_00": {
+      "scene_id": "scene0203_00",
+      "elapsed_seconds": 4.453644275665283,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 22472080,
+          "source_vertices": 205756,
+          "restored_vertices": 205756,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 15782683,
+          "source_vertices": 205756,
+          "restored_vertices": 276787,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0207_00": {
+      "scene_id": "scene0207_00",
+      "elapsed_seconds": 6.327650785446167,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 32295405,
+          "source_vertices": 304396,
+          "restored_vertices": 304396,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 22417611,
+          "source_vertices": 304396,
+          "restored_vertices": 388215,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0208_00": {
+      "scene_id": "scene0208_00",
+      "elapsed_seconds": 8.580261468887329,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 45535682,
+          "source_vertices": 407386,
+          "restored_vertices": 407386,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 32236263,
+          "source_vertices": 407386,
+          "restored_vertices": 575115,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0221_00": {
+      "scene_id": "scene0221_00",
+      "elapsed_seconds": 3.808636426925659,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 19200641,
+          "source_vertices": 185828,
+          "restored_vertices": 185828,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 13203135,
+          "source_vertices": 185828,
+          "restored_vertices": 223665,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0222_00": {
+      "scene_id": "scene0222_00",
+      "elapsed_seconds": 5.284441709518433,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 26483012,
+          "source_vertices": 234831,
+          "restored_vertices": 234831,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 18787139,
+          "source_vertices": 234831,
+          "restored_vertices": 334715,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0231_00": {
+      "scene_id": "scene0231_00",
+      "elapsed_seconds": 8.780709743499756,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 45667162,
+          "source_vertices": 419537,
+          "restored_vertices": 419537,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 32129087,
+          "source_vertices": 419537,
+          "restored_vertices": 562733,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0246_00": {
+      "scene_id": "scene0246_00",
+      "elapsed_seconds": 4.47037148475647,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 22257222,
+          "source_vertices": 201062,
+          "restored_vertices": 201062,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 15740075,
+          "source_vertices": 201062,
+          "restored_vertices": 279623,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0249_00": {
+      "scene_id": "scene0249_00",
+      "elapsed_seconds": 6.787623882293701,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 34684311,
+          "source_vertices": 331031,
+          "restored_vertices": 331031,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 23988123,
+          "source_vertices": 331031,
+          "restored_vertices": 412599,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0251_00": {
+      "scene_id": "scene0251_00",
+      "elapsed_seconds": 4.682393789291382,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 24467883,
+          "source_vertices": 226765,
+          "restored_vertices": 226765,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 17068383,
+          "source_vertices": 226765,
+          "restored_vertices": 296436,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0256_00": {
+      "scene_id": "scene0256_00",
+      "elapsed_seconds": 2.552574396133423,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 11540762,
+          "source_vertices": 108517,
+          "restored_vertices": 108517,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 8064891,
+          "source_vertices": 108517,
+          "restored_vertices": 139494,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0257_00": {
+      "scene_id": "scene0257_00",
+      "elapsed_seconds": 3.9428505897521973,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 20019586,
+          "source_vertices": 180928,
+          "restored_vertices": 180928,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 14210179,
+          "source_vertices": 180928,
+          "restored_vertices": 253159,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0277_00": {
+      "scene_id": "scene0277_00",
+      "elapsed_seconds": 1.7785921096801758,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 7781733,
+          "source_vertices": 79184,
+          "restored_vertices": 79184,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 5215299,
+          "source_vertices": 79184,
+          "restored_vertices": 85203,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0278_00": {
+      "scene_id": "scene0278_00",
+      "elapsed_seconds": 1.6642534732818604,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 7734732,
+          "source_vertices": 77020,
+          "restored_vertices": 77020,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 5223423,
+          "source_vertices": 77020,
+          "restored_vertices": 86379,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0300_00": {
+      "scene_id": "scene0300_00",
+      "elapsed_seconds": 3.056149959564209,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 15992447,
+          "source_vertices": 140216,
+          "restored_vertices": 140216,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 11435699,
+          "source_vertices": 140216,
+          "restored_vertices": 204572,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0304_00": {
+      "scene_id": "scene0304_00",
+      "elapsed_seconds": 3.7759687900543213,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 19008491,
+          "source_vertices": 164016,
+          "restored_vertices": 164016,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 13679907,
+          "source_vertices": 164016,
+          "restored_vertices": 246624,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0307_00": {
+      "scene_id": "scene0307_00",
+      "elapsed_seconds": 7.658057689666748,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 39576252,
+          "source_vertices": 371616,
+          "restored_vertices": 371616,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 27475275,
+          "source_vertices": 371616,
+          "restored_vertices": 476676,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0314_00": {
+      "scene_id": "scene0314_00",
+      "elapsed_seconds": 1.9406216144561768,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 9885661,
+          "source_vertices": 87446,
+          "restored_vertices": 87446,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 7056531,
+          "source_vertices": 87446,
+          "restored_vertices": 127683,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0316_00": {
+      "scene_id": "scene0316_00",
+      "elapsed_seconds": 1.7526957988739014,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 8209229,
+          "source_vertices": 78769,
+          "restored_vertices": 78769,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 5636479,
+          "source_vertices": 78769,
+          "restored_vertices": 95560,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0328_00": {
+      "scene_id": "scene0328_00",
+      "elapsed_seconds": 2.3730475902557373,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 12043747,
+          "source_vertices": 111467,
+          "restored_vertices": 111467,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 8524383,
+          "source_vertices": 111467,
+          "restored_vertices": 150405,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0329_00": {
+      "scene_id": "scene0329_00",
+      "elapsed_seconds": 7.6891021728515625,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 41790780,
+          "source_vertices": 355413,
+          "restored_vertices": 355413,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 30226735,
+          "source_vertices": 355413,
+          "restored_vertices": 550252,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0334_00": {
+      "scene_id": "scene0334_00",
+      "elapsed_seconds": 4.647905349731445,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 22368838,
+          "source_vertices": 197174,
+          "restored_vertices": 197174,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 16044779,
+          "source_vertices": 197174,
+          "restored_vertices": 287771,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0338_00": {
+      "scene_id": "scene0338_00",
+      "elapsed_seconds": 2.2246251106262207,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 10851862,
+          "source_vertices": 106339,
+          "restored_vertices": 106339,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 7408047,
+          "source_vertices": 106339,
+          "restored_vertices": 124023,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0342_00": {
+      "scene_id": "scene0342_00",
+      "elapsed_seconds": 1.889437198638916,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 9633833,
+          "source_vertices": 89958,
+          "restored_vertices": 89958,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 6779011,
+          "source_vertices": 89958,
+          "restored_vertices": 119383,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0343_00": {
+      "scene_id": "scene0343_00",
+      "elapsed_seconds": 3.343258857727051,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 17801339,
+          "source_vertices": 165618,
+          "restored_vertices": 165618,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 12476263,
+          "source_vertices": 165618,
+          "restored_vertices": 219865,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0351_00": {
+      "scene_id": "scene0351_00",
+      "elapsed_seconds": 3.624434471130371,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 19822601,
+          "source_vertices": 172134,
+          "restored_vertices": 172134,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 14342159,
+          "source_vertices": 172134,
+          "restored_vertices": 261023,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0353_00": {
+      "scene_id": "scene0353_00",
+      "elapsed_seconds": 4.356813192367554,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 21692849,
+          "source_vertices": 208782,
+          "restored_vertices": 208782,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 14960895,
+          "source_vertices": 208782,
+          "restored_vertices": 256938,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0354_00": {
+      "scene_id": "scene0354_00",
+      "elapsed_seconds": 2.4103145599365234,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 11802480,
+          "source_vertices": 110569,
+          "restored_vertices": 110569,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 8238511,
+          "source_vertices": 110569,
+          "restored_vertices": 142432,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0355_00": {
+      "scene_id": "scene0355_00",
+      "elapsed_seconds": 2.836852550506592,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 14581337,
+          "source_vertices": 136135,
+          "restored_vertices": 136135,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 10159987,
+          "source_vertices": 136135,
+          "restored_vertices": 175765,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0356_00": {
+      "scene_id": "scene0356_00",
+      "elapsed_seconds": 1.7431509494781494,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 8212038,
+          "source_vertices": 81172,
+          "restored_vertices": 81172,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 5585127,
+          "source_vertices": 81172,
+          "restored_vertices": 93318,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0357_00": {
+      "scene_id": "scene0357_00",
+      "elapsed_seconds": 2.8615427017211914,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 14623670,
+          "source_vertices": 136945,
+          "restored_vertices": 136945,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 10160411,
+          "source_vertices": 136945,
+          "restored_vertices": 176024,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0377_00": {
+      "scene_id": "scene0377_00",
+      "elapsed_seconds": 2.4149465560913086,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 11556713,
+          "source_vertices": 111811,
+          "restored_vertices": 111811,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 7917555,
+          "source_vertices": 111811,
+          "restored_vertices": 135609,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0378_00": {
+      "scene_id": "scene0378_00",
+      "elapsed_seconds": 3.263714551925659,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 15863280,
+          "source_vertices": 156298,
+          "restored_vertices": 156298,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 10727511,
+          "source_vertices": 156298,
+          "restored_vertices": 178797,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0382_00": {
+      "scene_id": "scene0382_00",
+      "elapsed_seconds": 2.270427942276001,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 11310195,
+          "source_vertices": 100285,
+          "restored_vertices": 100285,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 8038827,
+          "source_vertices": 100285,
+          "restored_vertices": 143208,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0389_00": {
+      "scene_id": "scene0389_00",
+      "elapsed_seconds": 4.420148134231567,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 21449134,
+          "source_vertices": 201003,
+          "restored_vertices": 201003,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 14898963,
+          "source_vertices": 201003,
+          "restored_vertices": 256080,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0406_00": {
+      "scene_id": "scene0406_00",
+      "elapsed_seconds": 1.1174895763397217,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 4880046,
+          "source_vertices": 48864,
+          "restored_vertices": 48864,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 3288659,
+          "source_vertices": 48864,
+          "restored_vertices": 54683,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0412_00": {
+      "scene_id": "scene0412_00",
+      "elapsed_seconds": 3.6996374130249023,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 18889215,
+          "source_vertices": 175557,
+          "restored_vertices": 175557,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 13300475,
+          "source_vertices": 175557,
+          "restored_vertices": 233510,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0414_00": {
+      "scene_id": "scene0414_00",
+      "elapsed_seconds": 4.4627366065979,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 22315949,
+          "source_vertices": 192685,
+          "restored_vertices": 192685,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 16064335,
+          "source_vertices": 192685,
+          "restored_vertices": 292702,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0423_00": {
+      "scene_id": "scene0423_00",
+      "elapsed_seconds": 1.1940665245056152,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 5264100,
+          "source_vertices": 53074,
+          "restored_vertices": 53074,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 3527143,
+          "source_vertices": 53074,
+          "restored_vertices": 57328,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0426_00": {
+      "scene_id": "scene0426_00",
+      "elapsed_seconds": 2.8756744861602783,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 13986985,
+          "source_vertices": 135867,
+          "restored_vertices": 135867,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 9529735,
+          "source_vertices": 135867,
+          "restored_vertices": 161173,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0427_00": {
+      "scene_id": "scene0427_00",
+      "elapsed_seconds": 1.6490440368652344,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 7476871,
+          "source_vertices": 74074,
+          "restored_vertices": 74074,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 5048175,
+          "source_vertices": 74074,
+          "restored_vertices": 83580,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0430_00": {
+      "scene_id": "scene0430_00",
+      "elapsed_seconds": 4.440640211105347,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 22257706,
+          "source_vertices": 210249,
+          "restored_vertices": 210249,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 15444047,
+          "source_vertices": 210249,
+          "restored_vertices": 266564,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0432_00": {
+      "scene_id": "scene0432_00",
+      "elapsed_seconds": 0.872626781463623,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 4295945,
+          "source_vertices": 39529,
+          "restored_vertices": 39529,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 3016659,
+          "source_vertices": 39529,
+          "restored_vertices": 52905,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0435_00": {
+      "scene_id": "scene0435_00",
+      "elapsed_seconds": 5.287646055221558,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 27369117,
+          "source_vertices": 254998,
+          "restored_vertices": 254998,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 19044715,
+          "source_vertices": 254998,
+          "restored_vertices": 328720,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0441_00": {
+      "scene_id": "scene0441_00",
+      "elapsed_seconds": 1.773632287979126,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 8444980,
+          "source_vertices": 86191,
+          "restored_vertices": 86191,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 5671391,
+          "source_vertices": 86191,
+          "restored_vertices": 92885,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0458_00": {
+      "scene_id": "scene0458_00",
+      "elapsed_seconds": 1.4206557273864746,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 6939086,
+          "source_vertices": 65264,
+          "restored_vertices": 65264,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 4798011,
+          "source_vertices": 65264,
+          "restored_vertices": 83049,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0461_00": {
+      "scene_id": "scene0461_00",
+      "elapsed_seconds": 1.2637379169464111,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 6414690,
+          "source_vertices": 59134,
+          "restored_vertices": 59134,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 4511667,
+          "source_vertices": 59134,
+          "restored_vertices": 78783,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0462_00": {
+      "scene_id": "scene0462_00",
+      "elapsed_seconds": 3.467409372329712,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 17068631,
+          "source_vertices": 156714,
+          "restored_vertices": 156714,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 11998343,
+          "source_vertices": 156714,
+          "restored_vertices": 210581,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0474_00": {
+      "scene_id": "scene0474_00",
+      "elapsed_seconds": 3.946754217147827,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 19546923,
+          "source_vertices": 182281,
+          "restored_vertices": 182281,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 13681207,
+          "source_vertices": 182281,
+          "restored_vertices": 237928,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0488_00": {
+      "scene_id": "scene0488_00",
+      "elapsed_seconds": 2.2491490840911865,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 11164819,
+          "source_vertices": 108319,
+          "restored_vertices": 108319,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 7624143,
+          "source_vertices": 108319,
+          "restored_vertices": 127650,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0490_00": {
+      "scene_id": "scene0490_00",
+      "elapsed_seconds": 2.789686441421509,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 14188809,
+          "source_vertices": 131283,
+          "restored_vertices": 131283,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 10026567,
+          "source_vertices": 131283,
+          "restored_vertices": 175986,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0494_00": {
+      "scene_id": "scene0494_00",
+      "elapsed_seconds": 1.3371939659118652,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 6337348,
+          "source_vertices": 62048,
+          "restored_vertices": 62048,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 4314195,
+          "source_vertices": 62048,
+          "restored_vertices": 72219,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0496_00": {
+      "scene_id": "scene0496_00",
+      "elapsed_seconds": 3.8932793140411377,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 20067444,
+          "source_vertices": 192962,
+          "restored_vertices": 192962,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 13858595,
+          "source_vertices": 192962,
+          "restored_vertices": 237701,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0500_00": {
+      "scene_id": "scene0500_00",
+      "elapsed_seconds": 8.171679973602295,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 41611814,
+          "source_vertices": 396942,
+          "restored_vertices": 396942,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 28865287,
+          "source_vertices": 396942,
+          "restored_vertices": 500566,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0518_00": {
+      "scene_id": "scene0518_00",
+      "elapsed_seconds": 2.8806896209716797,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 14315557,
+          "source_vertices": 130180,
+          "restored_vertices": 130180,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 10118079,
+          "source_vertices": 130180,
+          "restored_vertices": 179736,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0527_00": {
+      "scene_id": "scene0527_00",
+      "elapsed_seconds": 1.4189515113830566,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 6888245,
+          "source_vertices": 65893,
+          "restored_vertices": 65893,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 4801363,
+          "source_vertices": 65893,
+          "restored_vertices": 82603,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0535_00": {
+      "scene_id": "scene0535_00",
+      "elapsed_seconds": 1.902860403060913,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 9495962,
+          "source_vertices": 90268,
+          "restored_vertices": 90268,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 6582403,
+          "source_vertices": 90268,
+          "restored_vertices": 114010,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0549_00": {
+      "scene_id": "scene0549_00",
+      "elapsed_seconds": 3.4119436740875244,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 17005158,
+          "source_vertices": 161973,
+          "restored_vertices": 161973,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 11733107,
+          "source_vertices": 161973,
+          "restored_vertices": 201242,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0550_00": {
+      "scene_id": "scene0550_00",
+      "elapsed_seconds": 2.7020013332366943,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 13659769,
+          "source_vertices": 127677,
+          "restored_vertices": 127677,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 9491215,
+          "source_vertices": 127677,
+          "restored_vertices": 163963,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0552_00": {
+      "scene_id": "scene0552_00",
+      "elapsed_seconds": 2.5962836742401123,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 13139026,
+          "source_vertices": 123103,
+          "restored_vertices": 123103,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 9193719,
+          "source_vertices": 123103,
+          "restored_vertices": 160371,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0553_00": {
+      "scene_id": "scene0553_00",
+      "elapsed_seconds": 1.2568325996398926,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 6193729,
+          "source_vertices": 62854,
+          "restored_vertices": 62854,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 4143007,
+          "source_vertices": 62854,
+          "restored_vertices": 66889,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0558_00": {
+      "scene_id": "scene0558_00",
+      "elapsed_seconds": 1.9641835689544678,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 9779511,
+          "source_vertices": 92953,
+          "restored_vertices": 92953,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 6787707,
+          "source_vertices": 92953,
+          "restored_vertices": 117750,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0559_00": {
+      "scene_id": "scene0559_00",
+      "elapsed_seconds": 1.9480059146881104,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 9406217,
+          "source_vertices": 89796,
+          "restored_vertices": 89796,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 6539139,
+          "source_vertices": 89796,
+          "restored_vertices": 111660,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0565_00": {
+      "scene_id": "scene0565_00",
+      "elapsed_seconds": 3.499774932861328,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 17705808,
+          "source_vertices": 167558,
+          "restored_vertices": 167558,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 12294583,
+          "source_vertices": 167558,
+          "restored_vertices": 213742,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0568_00": {
+      "scene_id": "scene0568_00",
+      "elapsed_seconds": 4.857496976852417,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 24499342,
+          "source_vertices": 232453,
+          "restored_vertices": 232453,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 16945991,
+          "source_vertices": 232453,
+          "restored_vertices": 290279,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0574_00": {
+      "scene_id": "scene0574_00",
+      "elapsed_seconds": 1.1202576160430908,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 5502393,
+          "source_vertices": 55521,
+          "restored_vertices": 55521,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 3720847,
+          "source_vertices": 55521,
+          "restored_vertices": 60919,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0575_00": {
+      "scene_id": "scene0575_00",
+      "elapsed_seconds": 4.40661358833313,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 21681920,
+          "source_vertices": 194207,
+          "restored_vertices": 194207,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 15455235,
+          "source_vertices": 194207,
+          "restored_vertices": 274434,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0578_00": {
+      "scene_id": "scene0578_00",
+      "elapsed_seconds": 3.4637210369110107,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 16261782,
+          "source_vertices": 147607,
+          "restored_vertices": 147607,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 11474471,
+          "source_vertices": 147607,
+          "restored_vertices": 201287,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0580_00": {
+      "scene_id": "scene0580_00",
+      "elapsed_seconds": 3.475741147994995,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 16841476,
+          "source_vertices": 158047,
+          "restored_vertices": 158047,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 11668931,
+          "source_vertices": 158047,
+          "restored_vertices": 200591,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0583_00": {
+      "scene_id": "scene0583_00",
+      "elapsed_seconds": 2.98400616645813,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 15372956,
+          "source_vertices": 146782,
+          "restored_vertices": 146782,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 10758947,
+          "source_vertices": 146782,
+          "restored_vertices": 185177,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0591_00": {
+      "scene_id": "scene0591_00",
+      "elapsed_seconds": 3.5154166221618652,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 18007168,
+          "source_vertices": 175600,
+          "restored_vertices": 175600,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 12340515,
+          "source_vertices": 175600,
+          "restored_vertices": 209160,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0593_00": {
+      "scene_id": "scene0593_00",
+      "elapsed_seconds": 4.326208591461182,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 22550660,
+          "source_vertices": 211902,
+          "restored_vertices": 211902,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 15658711,
+          "source_vertices": 211902,
+          "restored_vertices": 270115,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0595_00": {
+      "scene_id": "scene0595_00",
+      "elapsed_seconds": 2.993272542953491,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 15707816,
+          "source_vertices": 142330,
+          "restored_vertices": 142330,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 11103367,
+          "source_vertices": 142330,
+          "restored_vertices": 196195,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0598_00": {
+      "scene_id": "scene0598_00",
+      "elapsed_seconds": 3.0746076107025146,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 15849421,
+          "source_vertices": 145562,
+          "restored_vertices": 145562,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 11150035,
+          "source_vertices": 145562,
+          "restored_vertices": 196804,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0599_00": {
+      "scene_id": "scene0599_00",
+      "elapsed_seconds": 3.013974666595459,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 14816671,
+          "source_vertices": 141933,
+          "restored_vertices": 141933,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 10246747,
+          "source_vertices": 141933,
+          "restored_vertices": 174946,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0606_00": {
+      "scene_id": "scene0606_00",
+      "elapsed_seconds": 3.6258246898651123,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 17745940,
+          "source_vertices": 164401,
+          "restored_vertices": 164401,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 12566555,
+          "source_vertices": 164401,
+          "restored_vertices": 222755,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0607_00": {
+      "scene_id": "scene0607_00",
+      "elapsed_seconds": 2.467395782470703,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 11690518,
+          "source_vertices": 113156,
+          "restored_vertices": 113156,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 7998555,
+          "source_vertices": 113156,
+          "restored_vertices": 134553,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0608_00": {
+      "scene_id": "scene0608_00",
+      "elapsed_seconds": 4.087306499481201,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 20159763,
+          "source_vertices": 186579,
+          "restored_vertices": 186579,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 14271051,
+          "source_vertices": 186579,
+          "restored_vertices": 251421,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0609_00": {
+      "scene_id": "scene0609_00",
+      "elapsed_seconds": 1.6490397453308105,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 8566224,
+          "source_vertices": 78836,
+          "restored_vertices": 78836,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 6051863,
+          "source_vertices": 78836,
+          "restored_vertices": 107084,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0616_00": {
+      "scene_id": "scene0616_00",
+      "elapsed_seconds": 6.853101015090942,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 37169936,
+          "source_vertices": 310248,
+          "restored_vertices": 310248,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 26895831,
+          "source_vertices": 310248,
+          "restored_vertices": 490749,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0618_00": {
+      "scene_id": "scene0618_00",
+      "elapsed_seconds": 5.005081415176392,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 24914713,
+          "source_vertices": 232740,
+          "restored_vertices": 232740,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 17379223,
+          "source_vertices": 232740,
+          "restored_vertices": 301963,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0621_00": {
+      "scene_id": "scene0621_00",
+      "elapsed_seconds": 5.304760694503784,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 28289459,
+          "source_vertices": 250821,
+          "restored_vertices": 250821,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 20095887,
+          "source_vertices": 250821,
+          "restored_vertices": 357237,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0629_00": {
+      "scene_id": "scene0629_00",
+      "elapsed_seconds": 5.589155673980713,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 28425032,
+          "source_vertices": 255083,
+          "restored_vertices": 255083,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 20183891,
+          "source_vertices": 255083,
+          "restored_vertices": 357887,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0633_00": {
+      "scene_id": "scene0633_00",
+      "elapsed_seconds": 2.0790984630584717,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 10341156,
+          "source_vertices": 101007,
+          "restored_vertices": 101007,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 7044171,
+          "source_vertices": 101007,
+          "restored_vertices": 118296,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0643_00": {
+      "scene_id": "scene0643_00",
+      "elapsed_seconds": 3.6331253051757812,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 17752711,
+          "source_vertices": 167360,
+          "restored_vertices": 167360,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 12372487,
+          "source_vertices": 167360,
+          "restored_vertices": 214798,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0644_00": {
+      "scene_id": "scene0644_00",
+      "elapsed_seconds": 6.417247533798218,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 32887169,
+          "source_vertices": 299472,
+          "restored_vertices": 299472,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 23282595,
+          "source_vertices": 299472,
+          "restored_vertices": 414300,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0645_00": {
+      "scene_id": "scene0645_00",
+      "elapsed_seconds": 7.1638524532318115,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 36506715,
+          "source_vertices": 352477,
+          "restored_vertices": 352477,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 24982543,
+          "source_vertices": 352477,
+          "restored_vertices": 421030,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0647_00": {
+      "scene_id": "scene0647_00",
+      "elapsed_seconds": 4.262011289596558,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 22319331,
+          "source_vertices": 196185,
+          "restored_vertices": 196185,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 15943423,
+          "source_vertices": 196185,
+          "restored_vertices": 285940,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0648_00": {
+      "scene_id": "scene0648_00",
+      "elapsed_seconds": 3.57987904548645,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 17815109,
+          "source_vertices": 167915,
+          "restored_vertices": 167915,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 12349843,
+          "source_vertices": 167915,
+          "restored_vertices": 214507,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0651_00": {
+      "scene_id": "scene0651_00",
+      "elapsed_seconds": 1.8397881984710693,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 8912041,
+          "source_vertices": 88450,
+          "restored_vertices": 88450,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 6036487,
+          "source_vertices": 88450,
+          "restored_vertices": 100627,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0652_00": {
+      "scene_id": "scene0652_00",
+      "elapsed_seconds": 2.2388687133789062,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 11172443,
+          "source_vertices": 100286,
+          "restored_vertices": 100286,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 7931419,
+          "source_vertices": 100286,
+          "restored_vertices": 141472,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0653_00": {
+      "scene_id": "scene0653_00",
+      "elapsed_seconds": 6.175464630126953,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 30892127,
+          "source_vertices": 284951,
+          "restored_vertices": 284951,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 21704083,
+          "source_vertices": 284951,
+          "restored_vertices": 380530,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0655_00": {
+      "scene_id": "scene0655_00",
+      "elapsed_seconds": 2.980158805847168,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 15064445,
+          "source_vertices": 139138,
+          "restored_vertices": 139138,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 10606935,
+          "source_vertices": 139138,
+          "restored_vertices": 185919,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0658_00": {
+      "scene_id": "scene0658_00",
+      "elapsed_seconds": 2.708418130874634,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 14117210,
+          "source_vertices": 129951,
+          "restored_vertices": 129951,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 9911743,
+          "source_vertices": 129951,
+          "restored_vertices": 173881,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0660_00": {
+      "scene_id": "scene0660_00",
+      "elapsed_seconds": 2.378786325454712,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 12692360,
+          "source_vertices": 110960,
+          "restored_vertices": 110960,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 9112043,
+          "source_vertices": 110960,
+          "restored_vertices": 164540,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0663_00": {
+      "scene_id": "scene0663_00",
+      "elapsed_seconds": 3.928243637084961,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 19453928,
+          "source_vertices": 184428,
+          "restored_vertices": 184428,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 13518447,
+          "source_vertices": 184428,
+          "restored_vertices": 233694,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0664_00": {
+      "scene_id": "scene0664_00",
+      "elapsed_seconds": 0.9598042964935303,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 4366644,
+          "source_vertices": 44585,
+          "restored_vertices": 44585,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 2907403,
+          "source_vertices": 44585,
+          "restored_vertices": 47221,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0665_00": {
+      "scene_id": "scene0665_00",
+      "elapsed_seconds": 5.155372381210327,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 26126551,
+          "source_vertices": 252726,
+          "restored_vertices": 252726,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 17983167,
+          "source_vertices": 252726,
+          "restored_vertices": 305454,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0670_00": {
+      "scene_id": "scene0670_00",
+      "elapsed_seconds": 3.7025749683380127,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 18587376,
+          "source_vertices": 176038,
+          "restored_vertices": 176038,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 12889679,
+          "source_vertices": 176038,
+          "restored_vertices": 221915,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0671_00": {
+      "scene_id": "scene0671_00",
+      "elapsed_seconds": 1.7312970161437988,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 8651453,
+          "source_vertices": 81469,
+          "restored_vertices": 81469,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 6034247,
+          "source_vertices": 81469,
+          "restored_vertices": 104579,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0678_00": {
+      "scene_id": "scene0678_00",
+      "elapsed_seconds": 7.328774452209473,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 38120327,
+          "source_vertices": 364811,
+          "restored_vertices": 364811,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 26331571,
+          "source_vertices": 364811,
+          "restored_vertices": 451039,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0684_00": {
+      "scene_id": "scene0684_00",
+      "elapsed_seconds": 0.9271502494812012,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 4131542,
+          "source_vertices": 41364,
+          "restored_vertices": 41364,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 2795699,
+          "source_vertices": 41364,
+          "restored_vertices": 46532,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0685_00": {
+      "scene_id": "scene0685_00",
+      "elapsed_seconds": 2.859419107437134,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 13712723,
+          "source_vertices": 132720,
+          "restored_vertices": 132720,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 9412427,
+          "source_vertices": 132720,
+          "restored_vertices": 159647,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0686_00": {
+      "scene_id": "scene0686_00",
+      "elapsed_seconds": 1.930187702178955,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 8820687,
+          "source_vertices": 89776,
+          "restored_vertices": 89776,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 5866419,
+          "source_vertices": 89776,
+          "restored_vertices": 94560,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0689_00": {
+      "scene_id": "scene0689_00",
+      "elapsed_seconds": 2.600205659866333,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 12902685,
+          "source_vertices": 122129,
+          "restored_vertices": 122129,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 8996983,
+          "source_vertices": 122129,
+          "restored_vertices": 155533,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0690_00": {
+      "scene_id": "scene0690_00",
+      "elapsed_seconds": 2.2446584701538086,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 11240230,
+          "source_vertices": 106050,
+          "restored_vertices": 106050,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 7826315,
+          "source_vertices": 106050,
+          "restored_vertices": 136361,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0693_00": {
+      "scene_id": "scene0693_00",
+      "elapsed_seconds": 0.8699860572814941,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 4140374,
+          "source_vertices": 41327,
+          "restored_vertices": 41327,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 2775287,
+          "source_vertices": 41327,
+          "restored_vertices": 45647,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0695_00": {
+      "scene_id": "scene0695_00",
+      "elapsed_seconds": 2.822228193283081,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 13991628,
+          "source_vertices": 133418,
+          "restored_vertices": 133418,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 9624943,
+          "source_vertices": 133418,
+          "restored_vertices": 164650,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0696_00": {
+      "scene_id": "scene0696_00",
+      "elapsed_seconds": 5.110945701599121,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 25925753,
+          "source_vertices": 231067,
+          "restored_vertices": 231067,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 18432111,
+          "source_vertices": 231067,
+          "restored_vertices": 329922,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0697_00": {
+      "scene_id": "scene0697_00",
+      "elapsed_seconds": 2.9264581203460693,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 14258501,
+          "source_vertices": 139300,
+          "restored_vertices": 139300,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 9829635,
+          "source_vertices": 139300,
+          "restored_vertices": 166206,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0699_00": {
+      "scene_id": "scene0699_00",
+      "elapsed_seconds": 3.0254504680633545,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 15588242,
+          "source_vertices": 153041,
+          "restored_vertices": 153041,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 10600387,
+          "source_vertices": 153041,
+          "restored_vertices": 177640,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0700_00": {
+      "scene_id": "scene0700_00",
+      "elapsed_seconds": 3.661771297454834,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 17579905,
+          "source_vertices": 167755,
+          "restored_vertices": 167755,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 12103527,
+          "source_vertices": 167755,
+          "restored_vertices": 206490,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0701_00": {
+      "scene_id": "scene0701_00",
+      "elapsed_seconds": 1.573714017868042,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 7982154,
+          "source_vertices": 73550,
+          "restored_vertices": 73550,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 5585715,
+          "source_vertices": 73550,
+          "restored_vertices": 97569,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0702_00": {
+      "scene_id": "scene0702_00",
+      "elapsed_seconds": 1.2605922222137451,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 5636220,
+          "source_vertices": 54769,
+          "restored_vertices": 54769,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 3866687,
+          "source_vertices": 54769,
+          "restored_vertices": 65600,
+          "byte_identical_ply": false
+        }
+      }
+    },
+    "scene0704_00": {
+      "scene_id": "scene0704_00",
+      "elapsed_seconds": 4.086864233016968,
+      "modes": {
+        "payload": {
+          "mode": "payload",
+          "status": "generated",
+          "osgb_bytes": 20702900,
+          "source_vertices": 183029,
+          "restored_vertices": 183029,
+          "byte_identical_ply": true
+        },
+        "geometry": {
+          "mode": "geometry",
+          "status": "generated",
+          "osgb_bytes": 14794383,
+          "source_vertices": 183029,
+          "restored_vertices": 265374,
+          "byte_identical_ply": false
+        }
+      }
+    }
+  },
+  "failures": {}
+}

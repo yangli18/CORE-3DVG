@@ -334,51 +334,54 @@ class Core3DVG(nn.Module):
         if 'init_boxes' in dec_res_s1:
             end_points['init_boxes'] = dec_res_s1['init_boxes'].transpose(0, 1) # [B, Q, 6]
 
-        is_vgdata = inputs['is_vgdata']
-        noun_batch_idx = inputs['noun_batch_idx']
-        noun_batch_ord = inputs['noun_batch_ord']
-        noun_text_feats = end_points['noun_text_feats'].transpose(0, 1)
-        noun_text_padding_mask = end_points['noun_text_padding_mask']
-        noun_dec_res = self.decoder_stage1(
-            point_feats[:, noun_batch_idx], point_pos[:, noun_batch_idx],
-            noun_text_feats, noun_text_padding_mask,
-            None, None, sample_pt_feat[noun_batch_idx],
-            sample_pt_boxes[noun_batch_idx], sample_pt_xyz[noun_batch_idx],
-            ext_input)
+        # Noun decoding is an auxiliary training/evaluation branch. It is not
+        # required for normal grounding inference from a scene and utterance.
+        if 'noun_text_feats' in end_points:
+            is_vgdata = inputs['is_vgdata']
+            noun_batch_idx = inputs['noun_batch_idx']
+            noun_batch_ord = inputs['noun_batch_ord']
+            noun_text_feats = end_points['noun_text_feats'].transpose(0, 1)
+            noun_text_padding_mask = end_points['noun_text_padding_mask']
+            noun_dec_res = self.decoder_stage1(
+                point_feats[:, noun_batch_idx], point_pos[:, noun_batch_idx],
+                noun_text_feats, noun_text_padding_mask,
+                None, None, sample_pt_feat[noun_batch_idx],
+                sample_pt_boxes[noun_batch_idx], sample_pt_xyz[noun_batch_idx],
+                ext_input)
 
-        noun_pred_logits = noun_dec_res['pred_logits'].transpose(1, 2)
-        noun_pred_boxes = noun_dec_res['pred_boxes'].transpose(1, 2)
-        noun_tgt_idx = inputs['noun_tgt_indices'].clone()
-        max_tgt_idx = noun_tgt_idx.max(-1)[0][noun_batch_idx]
-        noun_tgt_idx[noun_tgt_idx == -1] = 1e6
-        min_tgt_idx = noun_tgt_idx.min(-1)[0][noun_batch_idx]
-        has_label = (noun_batch_ord >= min_tgt_idx) & (noun_batch_ord <= max_tgt_idx)
-        has_label = has_label | (~is_vgdata[noun_batch_idx])
+            noun_pred_logits = noun_dec_res['pred_logits'].transpose(1, 2)
+            noun_pred_boxes = noun_dec_res['pred_boxes'].transpose(1, 2)
+            noun_tgt_idx = inputs['noun_tgt_indices'].clone()
+            max_tgt_idx = noun_tgt_idx.max(-1)[0][noun_batch_idx]
+            noun_tgt_idx[noun_tgt_idx == -1] = 1e6
+            min_tgt_idx = noun_tgt_idx.min(-1)[0][noun_batch_idx]
+            has_label = (noun_batch_ord >= min_tgt_idx) & (noun_batch_ord <= max_tgt_idx)
+            has_label = has_label | (~is_vgdata[noun_batch_idx])
 
-        noun_outputs_wlabel = {
-            'pred_logits': noun_pred_logits[:, has_label][-1],
-            'pred_boxes': noun_pred_boxes[:, has_label][-1],
-            'noun_batch_idx': noun_batch_idx[has_label],
-            'noun_batch_ord': noun_batch_ord[has_label],
-        }
-        noun_outputs_wolabel = {
-            'pred_logits': noun_pred_logits[:, ~has_label][-1],
-            'pred_boxes': noun_pred_boxes[:, ~has_label][-1],
-            'noun_batch_idx': noun_batch_idx[~has_label],
-            'noun_batch_ord': noun_batch_ord[~has_label],
-        }
-        if self.args.aux_outputs:
-            noun_outputs_wlabel['aux_outputs'] = [
-                {'pred_boxes': b, 'pred_logits': p}
-                for b, p in zip(noun_pred_boxes[:, has_label][:-1], noun_pred_logits[:, has_label][:-1])
-            ]
-            noun_outputs_wolabel['aux_outputs'] = [
-                {'pred_boxes': b, 'pred_logits': p}
-                for b, p in zip(noun_pred_boxes[:, ~has_label][:-1], noun_pred_logits[:, ~has_label][:-1])
-            ]
+            noun_outputs_wlabel = {
+                'pred_logits': noun_pred_logits[:, has_label][-1],
+                'pred_boxes': noun_pred_boxes[:, has_label][-1],
+                'noun_batch_idx': noun_batch_idx[has_label],
+                'noun_batch_ord': noun_batch_ord[has_label],
+            }
+            noun_outputs_wolabel = {
+                'pred_logits': noun_pred_logits[:, ~has_label][-1],
+                'pred_boxes': noun_pred_boxes[:, ~has_label][-1],
+                'noun_batch_idx': noun_batch_idx[~has_label],
+                'noun_batch_ord': noun_batch_ord[~has_label],
+            }
+            if self.args.aux_outputs:
+                noun_outputs_wlabel['aux_outputs'] = [
+                    {'pred_boxes': b, 'pred_logits': p}
+                    for b, p in zip(noun_pred_boxes[:, has_label][:-1], noun_pred_logits[:, has_label][:-1])
+                ]
+                noun_outputs_wolabel['aux_outputs'] = [
+                    {'pred_boxes': b, 'pred_logits': p}
+                    for b, p in zip(noun_pred_boxes[:, ~has_label][:-1], noun_pred_logits[:, ~has_label][:-1])
+                ]
 
-        end_points['noun_outputs_wlabel'] = noun_outputs_wlabel
-        end_points['noun_outputs_wolabel'] = noun_outputs_wolabel
+            end_points['noun_outputs_wlabel'] = noun_outputs_wlabel
+            end_points['noun_outputs_wolabel'] = noun_outputs_wolabel
 
 
 
@@ -452,25 +455,28 @@ class Core3DVG(nn.Module):
                 for aux_out, p in zip(end_points['aux_outputs_s2'], rel_pred_logits[:-1]):
                     aux_out['rel_pred_logits'] = p
 
-        rand_text_hs = end_points['rand_text_hidden_states']
-        rand_text_feats_s2 = self.text_projector_s2(rand_text_hs).transpose(0, 1)
-        rand_text_padding_mask = end_points['rand_text_padding_mask']
-        if hasattr(self.decoder_stage2, 'forward_rand_text'):
-            rand_dec_res_s2 = self.decoder_stage2.forward_rand_text(
-                cand_queries, cand_boxes.detach(),
-                rand_text_feats_s2, rand_text_padding_mask,
-                cand_queries, cand_boxes.detach(), cand_query_padding_mask, ext_input
-            )
-        else:
-            rand_dec_res_s2 = self.decoder_stage2(
-                cand_queries, cand_boxes.detach(),
-                rand_text_feats_s2, rand_text_padding_mask,
-                cand_queries, cand_boxes.detach(), cand_query_padding_mask, ext_input
-            )
-        rand_logits_s2 = rand_dec_res_s2['pred_logits'].transpose(1, 2)
-        end_points['rand_logits_s2'] = rand_logits_s2[-1]
-        if self.args.aux_outputs and rand_logits_s2.shape[0] > 1:
-            for aux_out, p in zip(end_points['aux_outputs_s2'], rand_logits_s2[:-1]):
-                aux_out['rand_logits_s2'] = p
+        # Random-text decoding is an auxiliary branch and is optional during
+        # deployment inference.
+        if 'rand_text_hidden_states' in end_points:
+            rand_text_hs = end_points['rand_text_hidden_states']
+            rand_text_feats_s2 = self.text_projector_s2(rand_text_hs).transpose(0, 1)
+            rand_text_padding_mask = end_points['rand_text_padding_mask']
+            if hasattr(self.decoder_stage2, 'forward_rand_text'):
+                rand_dec_res_s2 = self.decoder_stage2.forward_rand_text(
+                    cand_queries, cand_boxes.detach(),
+                    rand_text_feats_s2, rand_text_padding_mask,
+                    cand_queries, cand_boxes.detach(), cand_query_padding_mask, ext_input
+                )
+            else:
+                rand_dec_res_s2 = self.decoder_stage2(
+                    cand_queries, cand_boxes.detach(),
+                    rand_text_feats_s2, rand_text_padding_mask,
+                    cand_queries, cand_boxes.detach(), cand_query_padding_mask, ext_input
+                )
+            rand_logits_s2 = rand_dec_res_s2['pred_logits'].transpose(1, 2)
+            end_points['rand_logits_s2'] = rand_logits_s2[-1]
+            if self.args.aux_outputs and rand_logits_s2.shape[0] > 1:
+                for aux_out, p in zip(end_points['aux_outputs_s2'], rand_logits_s2[:-1]):
+                    aux_out['rand_logits_s2'] = p
 
         return end_points

@@ -31,18 +31,31 @@ def parse_args():
     parser.add_argument('--dataset', type=str, default=['sr3d'], nargs='+')
     parser.add_argument('--test_dataset', default='sr3d')
     parser.add_argument('--data_root', default='./')
+    parser.add_argument(
+        '--inference_scans_dir',
+        default='',
+        help='Optional scans directory used only for model point-cloud inputs',
+    )
+    parser.add_argument(
+        '--inference_axis_alignment',
+        choices=('auto', 'none'),
+        default='auto',
+        help='Apply ScanNet axis alignment to overridden inference scans',
+    )
     parser.add_argument('--use_height', action='store_true')
     parser.add_argument('--use_color', action='store_true')
     parser.add_argument('--use_multiview', action='store_true')
-    parser.add_argument('--butd', action='store_true')
-    parser.add_argument('--butd_gt', action='store_true')
-    parser.add_argument('--butd_cls', action='store_true')
     parser.add_argument('--num_workers', type=int, default=4)
     parser.add_argument('--extra_dataset_cfg', default=dict())
 
     # IO
     parser.add_argument('--checkpoint_path', default=None, help='Model checkpoint path')
     parser.add_argument('--log_dir', default='log')
+    parser.add_argument(
+        '--eval_output_dir',
+        default='',
+        help='Optional exact output directory for one evaluation run',
+    )
     parser.add_argument('--text_encoder_name_or_path', default='roberta-base')
 
     # Runtime
@@ -132,7 +145,9 @@ class BaseEvaluator:
 
     def __init__(self, args):
         name = args.log_dir.split('/')[-1]
-        if args.use_eval_dir:
+        if args.eval_output_dir:
+            args.log_dir = args.eval_output_dir
+        elif args.use_eval_dir:
             args.log_dir = os.path.join(args.log_dir, ','.join(args.dataset), 'eval')
         else:
             args.log_dir = os.path.join(args.log_dir, ','.join(args.dataset), f'{int(time.time())}')

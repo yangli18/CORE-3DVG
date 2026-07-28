@@ -40,9 +40,10 @@ class GroundingDataset(Dataset):
                  test_dataset='sr3d',
                  split='val', overfit=False,
                  data_path='./',
+                 inference_scans_dir='',
+                 inference_axis_alignment='auto',
                  use_color=False, use_height=False, use_multiview=False,
                  detect_intermediate=False,
-                 butd=False, butd_gt=False, butd_cls=False,
                  extra_dataset_cfg=dict(), text_encoder_name_or_path="roberta-base"):
         """Initialize dataset (here for ReferIt3D utterances)."""
         self.dataset_dict = dataset_dict
@@ -54,9 +55,9 @@ class GroundingDataset(Dataset):
         self.detect_intermediate = detect_intermediate
         self.use_multiview = use_multiview
         self.data_path = data_path
-        self.butd = butd
-        self.butd_gt = butd_gt
-        self.butd_cls = butd_cls
+        self.inference_scans_dir = inference_scans_dir
+        self.inference_axis_alignment = inference_axis_alignment
+        self.inference_scans = {}
 
         self.mean_rgb = np.array([109.8, 97.2, 83.8]) / 256
         self.label_map = read_label_mapping(
@@ -85,10 +86,6 @@ class GroundingDataset(Dataset):
                 break
             except:
                 continue
-        if os.path.exists('data/cls_results.json'):
-            with open('data/cls_results.json') as fid:
-                self.cls_results = json.load(fid)  # {scan_id: [class0, ...]}
-
         self.text_noun_span_file = extra_dataset_cfg.get('text_noun_span_file', '')
 
         self.scanrefer_fix_missing_target_text = extra_dataset_cfg.get('scanrefer_fix_missing_target_text', False)
@@ -502,6 +499,15 @@ class GroundingDataset(Dataset):
     def _get_pc(self, anno, scan):
         """Return a point cloud representation of current scene."""
         scan_id = anno['scan_id']
+        if self.inference_scans_dir:
+            if scan_id not in self.inference_scans:
+                self.inference_scans[scan_id] = Scan(
+                    scan_id,
+                    self.inference_scans_dir,
+                    load_objects=False,
+                    align_to_axes=self.inference_axis_alignment != 'none',
+                )
+            scan = self.inference_scans[scan_id]
         rel_name = "none"
         if anno['dataset'].startswith('sr3d'):
             rel_name = self._find_rel(anno['utterance'])
@@ -522,8 +528,6 @@ class GroundingDataset(Dataset):
         if self.use_multiview:
             multiview_data = self._load_multiview(scan_id)
 
-        augmentations = {}
-
         # e. Concatenate representations
         point_cloud = scan.pc
         if color is not None:
@@ -533,7 +537,7 @@ class GroundingDataset(Dataset):
         if multiview_data is not None:
             point_cloud = np.concatenate([point_cloud, multiview_data], 1)
 
-        return point_cloud, augmentations, scan.color
+        return point_cloud
 
     # 得到 target box, anchor box 对应句子tokens 的 text_span
     def _get_token_positive_map(self, anno):
@@ -603,82 +607,8 @@ class GroundingDataset(Dataset):
         box_label_mask[:len(tids)] = 1
         return bboxes, box_label_mask, point_instance_label
 
-    def _get_scene_objects(self, scan): # 选出场景中 id 在 DC.nuy40id2class 里的 boxes
-        # Objects to keep
-        keep_ = np.array([
-            self.label_map[
-                scan.get_object_instance_label(ind)
-            ] in DC.nyu40id2class
-            for ind in range(len(scan.three_d_objects))
-        ])[:MAX_NUM_OBJ]
-        keep = np.array([False] * MAX_NUM_OBJ)
-        keep[:len(keep_)] = keep_
-
-        # Class ids
-        cid = np.array([
-            DC.nyu40id2class[self.label_map[scan.get_object_instance_label(k)]]
-            for k, kept in enumerate(keep) if kept
-        ])
-        class_ids = np.zeros((MAX_NUM_OBJ,))
-        class_ids[keep] = cid
-
-        # Object boxes
-        all_bboxes = np.zeros((MAX_NUM_OBJ, 6))
-        all_bboxes_ = np.stack([
-            scan.get_object_bbox(k).reshape(-1)
-            for k, kept in enumerate(keep) if kept
-        ])
-        # cx, cy, cz, w, h, d
-        all_bboxes_ = np.concatenate((
-            (all_bboxes_[:, :3] + all_bboxes_[:, 3:]) * 0.5,
-            all_bboxes_[:, 3:] - all_bboxes_[:, :3]
-        ), 1)
-        all_bboxes[keep] = all_bboxes_
-        # Which boxes we're interested for
-        all_bbox_label_mask = keep
-        return class_ids, all_bboxes, all_bbox_label_mask
-
-    def _get_detected_objects(self, split, scan_id, augmentations): # 获取 group-free 的检测框
-        # Initialize
-        all_detected_bboxes = np.zeros((MAX_NUM_OBJ, 6))
-        all_detected_bbox_label_mask = np.array([False] * MAX_NUM_OBJ)
-        detected_class_ids = np.zeros((MAX_NUM_OBJ,))
-        detected_logits = np.zeros((MAX_NUM_OBJ, NUM_CLASSES))
-
-        # Load
-        detected_dict = np.load(
-            f'{self.data_path}group_free_pred_bboxes_{split}/{scan_id}.npy',
-            allow_pickle=True
-        ).item()
-
-        all_bboxes_ = np.array(detected_dict['box'])
-        classes = detected_dict['class']
-        cid = np.array([DC.nyu40id2class[
-            self.label_map[c]] for c in detected_dict['class']
-        ])
-
-        all_bboxes_ = np.concatenate((
-            (all_bboxes_[:, :3] + all_bboxes_[:, 3:]) * 0.5,
-            all_bboxes_[:, 3:] - all_bboxes_[:, :3]
-        ), 1)
-
-        assert len(classes) < MAX_NUM_OBJ
-        assert len(classes) == all_bboxes_.shape[0]
-
-        num_objs = len(classes)
-        all_detected_bboxes[:num_objs] = all_bboxes_
-        all_detected_bbox_label_mask[:num_objs] = np.array([True] * num_objs)
-        detected_class_ids[:num_objs] = cid
-        detected_logits[:num_objs] = detected_dict['logits']
-        return (
-            all_detected_bboxes, all_detected_bbox_label_mask,
-            detected_class_ids, detected_logits
-        )
-
     def __getitem__(self, index):
         """Get current batch for input index."""
-        split = self.split
-
         # Read annotation
         anno = self.annos[index]
         scan_id = anno['scan_id']
@@ -686,7 +616,7 @@ class GroundingDataset(Dataset):
         scan.pc = np.copy(scan.orig_pc)
 
         # Point cloud representation
-        point_cloud, augmentations, og_color = self._get_pc(anno, scan)
+        point_cloud = self._get_pc(anno, scan)
 
         # "Target" boxes: append anchors if they're to be detected
         gt_bboxes, box_label_mask, point_instance_label = \
@@ -694,31 +624,6 @@ class GroundingDataset(Dataset):
 
         # Positive map for soft-token and contrastive losses
         # tokens_positive, positive_map = self._get_token_positive_map(anno) # [max_#object, 2], [max_#object, 256]
-
-        # Scene gt boxes
-        (
-            class_ids, all_bboxes, all_bbox_label_mask
-        ) = self._get_scene_objects(scan)
-
-        # Detected boxes
-        (
-            all_detected_bboxes, all_detected_bbox_label_mask,
-            detected_class_ids, detected_logits
-        ) = self._get_detected_objects(split, anno['scan_id'], augmentations)
-
-        # Assume a perfect object detector
-        if self.butd_gt:
-            all_detected_bboxes = all_bboxes
-            all_detected_bbox_label_mask = all_bbox_label_mask
-            detected_class_ids = class_ids
-
-        # Assume a perfect object proposal stage
-        if self.butd_cls:
-            all_detected_bboxes = all_bboxes
-            all_detected_bbox_label_mask = all_bbox_label_mask
-            detected_class_ids = np.zeros((len(all_bboxes,)))
-            classes = np.array(self.cls_results[anno['scan_id']])
-            detected_class_ids[all_bbox_label_mask] = classes[classes > -1]
 
         # Return
         _labels = np.zeros(MAX_NUM_OBJ)
@@ -789,9 +694,6 @@ class GroundingDataset(Dataset):
             "scan_ids": anno['scan_id'],
             "point_clouds": point_cloud.astype(np.float32),
             "utterances": (utterance),
-            "all_detected_boxes": all_detected_bboxes.astype(np.float32),
-            "all_detected_bbox_label_mask": all_detected_bbox_label_mask.astype(np.bool8),
-            "all_detected_class_ids": detected_class_ids.astype(np.int64),
             "is_view_dep": self._is_view_dep(anno['utterance']),
             "is_hard": len(anno['distractor_ids']) > 1,
             "is_unique": len(anno['distractor_ids']) == 0,

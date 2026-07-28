@@ -29,11 +29,10 @@ class GroundingEvaluator(BaseEvaluator):
             use_height=args.use_height,
             overfit=args.debug,
             data_path=args.data_root,
+            inference_scans_dir=args.inference_scans_dir,
+            inference_axis_alignment=args.inference_axis_alignment,
             detect_intermediate=args.detect_intermediate,
             use_multiview=args.use_multiview,
-            butd=args.butd,
-            butd_gt=args.butd_gt,
-            butd_cls=args.butd_cls,
             extra_dataset_cfg=args.extra_dataset_cfg,
             text_encoder_name_or_path=args.text_encoder_name_or_path,
         )
@@ -71,9 +70,6 @@ class GroundingEvaluator(BaseEvaluator):
         inputs = {
             'point_clouds': batch_data['point_clouds'].float(),
             'text': batch_data['utterances'],
-            'det_boxes': batch_data['all_detected_boxes'],
-            'det_bbox_label_mask': batch_data['all_detected_bbox_label_mask'],
-            'det_class_ids': batch_data['all_detected_class_ids'],
             'span_indices': batch_data['span_indices'],
             'expand_indices': batch_data['expand_indices'],
             'span_batch_idx': batch_data['span_batch_idx'],
