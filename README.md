@@ -75,6 +75,50 @@ read the repository-wide axis-alignment JSON.
 
 ## ScanNet / OSGB round trip
 
+### OpenSceneGraph installation
+
+`tools/osgb_bundle.cpp` performs all OSGB reading and writing. OpenSceneGraph
+provides the headers, shared libraries, and `osgdb_osg` plugin used by this
+helper. The helper is compiled for the CPU of each deployment machine, so an
+amd64 helper cannot be copied to an ARM64/910B machine.
+
+With sudo, install the system packages:
+
+```bash
+sudo apt-get update
+sudo apt-get install -y g++ openscenegraph libopenscenegraph-dev
+```
+
+The first OSGB command then compiles `.tools/osg_bundle` automatically.
+
+Without sudo, this repository includes Ubuntu `.deb` packages for both
+deployment environments:
+
+| Host | Included OSG |
+| --- | --- |
+| Ubuntu 20.04, x86_64/amd64 | 3.6.4 |
+| Ubuntu 22.04, aarch64/ARM64 (Ascend 910B) | 3.6.5 |
+
+After `git clone`, run:
+
+```bash
+python tools/setup_local_osg.py --clean
+```
+
+This command checks package hashes, selects the matching architecture, extracts
+the packages to `.tools/osg/root` with `dpkg-deb -x`, compiles the native
+`.tools/osg_bundle` with the machine's `g++`, and checks missing shared
+libraries with `ldd`. It does not modify `/usr` and does not need root access.
+The OSGB tools find this local runtime automatically.
+
+Smoke test:
+
+```bash
+python tools/osgb_roundtrip.py restore \
+  scene.osgb /tmp/osgb-smoke-test \
+  --mode geometry
+```
+
 Two conversion modes are supported:
 
 - `geometry`: restore XYZ/RGB from ordinary OSGB geometry. This works on
@@ -84,8 +128,7 @@ Two conversion modes are supported:
   `--profile inference` it embeds only `<scene>_vh_clean_2.ply` and, when
   present, `<scene>.txt`; the restored PLY is byte-identical.
 
-OpenSceneGraph 3.6 and its development headers are required. Pack, verify, and
-restore one inference scene with:
+Pack, verify, and restore one inference scene with:
 
 ```bash
 python tools/osgb_roundtrip.py pack \

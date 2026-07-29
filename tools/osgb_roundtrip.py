@@ -8,6 +8,7 @@ import io
 import json
 import os
 from pathlib import Path
+import platform
 import subprocess
 import tempfile
 import zipfile
@@ -37,12 +38,67 @@ def find_osg_root(explicit=None):
     return local if local.exists() else None
 
 
+def compiler_triplet():
+    try:
+        return subprocess.check_output(
+            ["g++", "-dumpmachine"], text=True, stderr=subprocess.DEVNULL
+        ).strip()
+    except (FileNotFoundError, subprocess.CalledProcessError):
+        machine = platform.machine().lower()
+        aliases = {
+            "amd64": "x86_64-linux-gnu",
+            "x86_64": "x86_64-linux-gnu",
+            "arm64": "aarch64-linux-gnu",
+            "aarch64": "aarch64-linux-gnu",
+        }
+        return aliases.get(machine, machine + "-linux-gnu")
+
+
+def osg_library_dir(osg_root, require_development=False):
+    prefix = (Path(osg_root) / "usr") if osg_root else Path("/usr")
+    candidates = [
+        prefix / "lib" / compiler_triplet(),
+        prefix / "lib64",
+        prefix / "lib",
+    ]
+    candidates.extend(sorted((prefix / "lib").glob("*-linux-gnu")))
+    seen = set()
+    for candidate in candidates:
+        candidate = candidate.resolve()
+        if candidate in seen or not candidate.is_dir():
+            continue
+        seen.add(candidate)
+        pattern = "libosgDB.so" if require_development else "libosgDB.so*"
+        if any(candidate.glob(pattern)):
+            return candidate
+    location = str(prefix / "lib")
+    kind = "development symlink" if require_development else "runtime library"
+    raise RuntimeError(f"OpenSceneGraph {kind} was not found below {location}")
+
+
+def osg_plugin_dir(library_dir):
+    candidates = sorted(
+        (
+            path
+            for path in Path(library_dir).glob("osgPlugins-*")
+            if (path / "osgdb_osg.so").is_file()
+        ),
+        reverse=True,
+    )
+    if not candidates:
+        raise RuntimeError(
+            "The OpenSceneGraph osgdb_osg plugin was not found below "
+            + str(library_dir)
+        )
+    return candidates[0]
+
+
 def osg_environment(osg_root):
     env = os.environ.copy()
     if osg_root is None:
         return env
-    library_dir = osg_root / "usr" / "lib" / "x86_64-linux-gnu"
-    plugin_dir = library_dir / "osgPlugins-3.6.4"
+    library_dir = osg_library_dir(osg_root)
+    plugin_dir = osg_plugin_dir(library_dir)
     env["LD_LIBRARY_PATH"] = str(library_dir) + (
         ":" + env["LD_LIBRARY_PATH"] if env.get("LD_LIBRARY_PATH") else ""
     )
@@ -53,11 +109,7 @@ def osg_environment(osg_root):
 def compile_helper(osg_root, helper_path):
     source = Path(__file__).with_name("osgb_bundle.cpp")
     include_dir = osg_root / "usr" / "include" if osg_root else Path("/usr/include")
-    library_dir = (
-        osg_root / "usr" / "lib" / "x86_64-linux-gnu"
-        if osg_root
-        else Path("/usr/lib/x86_64-linux-gnu")
-    )
+    library_dir = osg_library_dir(osg_root, require_development=True)
     helper_path.parent.mkdir(parents=True, exist_ok=True)
     command = [
         "g++",
@@ -68,6 +120,7 @@ def compile_helper(osg_root, helper_path):
         str(source),
         "-L",
         str(library_dir),
+        "-Wl,-rpath-link," + str(library_dir),
         "-Wl,-rpath," + str(library_dir),
         "-losgDB",
         "-losg",
@@ -82,8 +135,11 @@ def resolve_helper(args):
     osg_root = find_osg_root(args.osg_root)
     if args.helper:
         helper = Path(args.helper).resolve()
-    else:
-        helper = Path(__file__).resolve().parents[1] / ".tools" / "osg_bundle"
+        if not helper.is_file():
+            raise FileNotFoundError(str(helper))
+        return helper, osg_root
+
+    helper = Path(__file__).resolve().parents[1] / ".tools" / "osg_bundle"
     source = Path(__file__).with_name("osgb_bundle.cpp")
     if not helper.exists() or helper.stat().st_mtime < source.stat().st_mtime:
         if osg_root is None and not Path("/usr/include/osg/Group").exists():
