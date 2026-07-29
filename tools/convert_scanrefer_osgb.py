@@ -75,10 +75,20 @@ def output_paths(output_root, scene_id, mode):
     return osgb, restored
 
 
+def copy_scene_txt_next_to_osgb(scene_dir, osgb):
+    scene_id = scene_dir.name
+    source = scene_dir / (scene_id + ".txt")
+    if not source.is_file():
+        raise FileNotFoundError(str(source))
+    osgb.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(str(source), str(osgb.parent / source.name))
+
+
 def payload_roundtrip(scene_dir, output_root, helper, osg_root, overwrite):
     scene_id = scene_dir.name
     source_ply = scene_dir / (scene_id + "_vh_clean_2.ply")
     osgb, restored_ply = output_paths(output_root, scene_id, "payload")
+    copy_scene_txt_next_to_osgb(scene_dir, osgb)
     source_hash = sha256_file(source_ply)
     if (
         not overwrite
@@ -141,6 +151,7 @@ def geometry_roundtrip(scene_dir, output_root, helper, osg_root, overwrite):
     scene_id = scene_dir.name
     source_ply = scene_dir / (scene_id + "_vh_clean_2.ply")
     osgb, restored_ply = output_paths(output_root, scene_id, "geometry")
+    copy_scene_txt_next_to_osgb(scene_dir, osgb)
     if not overwrite and osgb.is_file() and restored_ply.is_file():
         return {
             "mode": "geometry",

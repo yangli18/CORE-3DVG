@@ -58,7 +58,7 @@ computed because this deployment path has no ground-truth target:
 ```bash
 CUDA_VISIBLE_DEVICES=7 python tools/infer_single.py \
   artifacts/scanrefer_osgb_eval/geometry_osgb/scene0011_00.osgb \
-  DATA_ROOT/scans/scene0011_00/scene0011_00.txt \
+  artifacts/scanrefer_osgb_eval/geometry_osgb/scene0011_00.txt \
   --config configs/scanrefer_cfg.py \
   --checkpoint logs/core3dvg_scanrefer.pth \
   --utterance "there is a dark brown wooden and leather chair" \
@@ -121,9 +121,9 @@ python tools/convert_scanrefer_osgb.py --workers 4
 
 Converted ScanRefer data is stored under:
 
-- Geometry OSGB: `artifacts/scanrefer_osgb_eval/geometry_osgb/`
+- Geometry OSGB/TXT: `artifacts/scanrefer_osgb_eval/geometry_osgb/`
 - Geometry-restored PLY: `artifacts/scanrefer_osgb_eval/geometry_restored/`
-- Payload OSGB: `artifacts/scanrefer_osgb_eval/payload_osgb/`
+- Payload OSGB/TXT: `artifacts/scanrefer_osgb_eval/payload_osgb/`
 - Payload-restored PLY/TXT: `artifacts/scanrefer_osgb_eval/payload_restored/`
 - Conversion and evaluation summaries:
   `artifacts/scanrefer_osgb_eval/conversion_summary.json` and
